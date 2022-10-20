@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> What Type of Learner Are You? </title>
+    <link href="http://fonts.cdnfonts.com/css/babydoll" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="Quiz Favicon.ico">
+
+    <style type="text/css">
+        @import url('http://fonts.cdnfonts.com/css/babydoll');  
+        html{
+            background-color:gainsboro
+        }
+        body{
+        background-color: whitesmoke;   
+        font-family: 'BabyDoll', sans-serif;  
+        font-size: 100%;         
+        text-align: center;
+        width: 800px;
+        margin: 10px auto;
+        padding: 20px;
+        border-radius: 1em;   
+        }
+
+        h2{
+            color: #42536e;
+            font-size: 250%;
+        }
+
+        h3.question{
+            color:#538a8c;
+            font-size: 2em;
+        }
+        
+        .info{
+            font-size: 1.5em;
+        }
+
+    .answer{
+            background-color: #42536e;
+            color: whitesmoke;
+            border-radius: 10px;
+            padding: 1em;
+            text-align: center;
+            cursor: pointer;
+            width: 60%;
+            font-size: 1.5em;
+            margin: 10px auto 0;
+
+        }
+
+    .answer:hover{
+            background-color: cadetblue;
+
+        }
+
+    .answer.selected{
+            background-color: cadetblue;
+
+        }
+
+        .button{
+            background-color: cadetblue;
+            color: whitesmoke;
+            border-radius: 10px;
+            padding: 10px 5px;
+            text-align: center;
+            cursor: pointer;
+            font-size: 2em;
+        }
+        .mini.button{
+            display: block;
+            width: 30%;
+        }
+        .next{
+            float: right;
+        }
+        .previous{
+            float: left;
+        }
+        .button:hover{
+            background-color:#46608a;
+        }
+        .button-holder{
+            width: 60%;
+            padding: .5em 0;
+            margin: .5em auto;
+        }
+        .clearfix:before,
+        .clearfix:after{
+            content: " ";
+            display: table;
+        }
+        .clearfix:after{
+            clear: both;
+        }
+        .response p{
+            color:#538a8c;
+            margin: 30px auto;
+            font-size: 2em;
+        }
+
+    </style>
+
+   
+</head>
+
+<body>
+    
+   <h2> What Type of Learner Am I? </h2> 
+   <div id="quiz-area"> 
+    <section class="q-n-a">
+        <h3 class="question">1. When you can't spell a word, what are you most likely to do?</h3>
+        <div class="answers">
+            <div class="answer" data-value="1"> Write it down to see if it looks right</div>
+            <div class="answer" data-value="2">Spell it out loud to see if it sounds right</div>
+            <div class="answer" data-value="3">Trace the letters (finger spelling)</div>
+        </div>
+        <div class="button-holder clearfix">
+                <div class="previous mini button">Previous</div><div class="next mini button">Next</div>
+        </div>
+    </section>
+        
+    <section class="q-n-a">
+        <h3 class="question">2. What book would you read for fun?</h3> 
+        <div class="answers">
+            <div class="answer" data-value="1">A book with lots of pictures</div>
+            <div class="answer" data-value="2">A book with lots of words</div>
+            <div class="answer" data-value="3">A book with word searches/puzzles</div>
+        </div>
+        <div class="button-holder clearfix">
+            <div class="previous mini button">Previous</div><div class="next mini button">Next</div>
+        </div>    
+    </section>
+
+    <section class="q-n-a">
+        <h3 class="question">3. You're waiting in line to pay. What would you do while you're waiting?</h3>
+        <div class="answers">
+            <div class="answer" data-value="1">Look at the products next to the line</div>
+            <div class="answer" data-value="2">Talk to the person next to you in line</div>
+            <div class="answer" data-value="3">Fidget or move back and forth</div>
+        </div>
+        <div class="button-holder clearfix">
+            <div class="previous mini button">Previous</div><div class="next mini button">Next</div>
+        </div>    
+    </section>
+
+    <section class="q-n-a">
+        <h3 class="question">4. What's the best way for you to study?</h3>
+        <div class="answers">
+            <div class="answer" data-value="1">Read books/notes and review pictures/charts</div>
+            <div class="answer" data-value="2">Have someone ask you questions out loud</div>
+            <div class="answer" data-value="3">Make flash cards you can review</div>
+        </div>
+        <div class="button-holder clearfix">
+            <div class="previous mini button">Previous</div><div class="next mini button">Next</div>
+        </div>    
+    </section>
+           
+    <section class="q-n-a">
+        <h3 class="question">5. When you see the word "dog," what do you do?</h3>
+        <div class="answers">
+            <div class="answer" data-value="1">Picture a dog in your mind</div>
+            <div class="answer" data-value="2">Say the word to yourself</div>
+            <div class="answer" data-value="3">Think about being with dogs (petting it or hearing it bark)</div>
+        </div>
+        <div class="button-holder clearfix">
+            <div class="previous mini button">Previous</div><div class="next mini button">Next</div>
+        </div>   
+    </section>
+
+    <section class="q-n-a">
+        <h3 class="question">6. What's the best way for you to learn how something works (like a piece of technology)?</h3>
+        <div class="answers">
+            <div class="answer" data-value="1">Have someone show you</div>
+            <div class="answer" data-value="2">Read about it or listen to someone explain it</div>
+            <div class="answer" data-value="3">Figure it out yourself</div>
+        </div>
+        <div class="button-holder clearfix">
+            <div class="previous mini button">Previous</div><div class="next mini button">Next</div>
+        </div>    
+    </section>
+
+    <section class="q-n-a">
+        <h3 class="question">7. If you went to a school ball, what are you most likely to remember the next day?</h3>
+        <div class="answers">
+            <div class="answer" data-value="1">The environment and faces of people who were there</div>
+            <div class="answer" data-value="2">The music that was played</div>
+            <div class="answer" data-value="3">The dance floor and the food</div>
+        </div>
+        <div class="button-holder clearfix">
+            <div class="previous mini button">Previous</div><div class="next mini button">Next</div>
+        </div>    
+    </section>
+               
+    <section class="q-n-a">
+        <h3 class="question">8. What do you find most distracting when you're studying?</h3>
+        <div class="answers">
+            <div class="answer" data-value="1">Procrastination</div>
+            <div class="answer" data-value="2">Loud noises</div>
+            <div class="answer" data-value="3">An uncomfortable chair</div>
+        </div>
+        <div class="button-holder clearfix">
+            <div class="previous mini button">Previous</div><div class="next mini button">Next</div>
+        </div>    
+    </section>
+
+    <section class="q-n-a">
+        <h3 class="question">9. When you're angry, what are you most likely to do?</h3>
+        <div class="answers">
+            <div class="answer" data-value="1">Look visibly angry</div>
+            <div class="answer" data-value="2">Yell and shout</div>
+            <div class="answer" data-value="3">Slam doors/punch walls</div>
+        </div>
+        <div class="button-holder clearfix">
+            <div class="previous mini button">Previous</div><div class="next mini button">Next</div>
+        </div>    
+    </section>
+
+    <section class="q-n-a">
+        <h3 class="question">10. When you're happy, what are you most likely to do?</h3>
+        <div class="answers">
+            <div class="answer" data-value="1">Look happy (smiling/laughing)</div>
+            <div class="answer" data-value="2">Talk with everyone</div>
+            <div class="answer" data-value="3">Act really hyper</div>
+        </div>
+        <div class="button-holder clearfix">
+            <div class="previous mini button">Previous</div><div class="next mini button">Next</div>
+        </div>    
+    </section>
+
+    <section class="q-n-a">
+        <h3 class="question">11. When in a new place, how do you find your way around?</h3>
+        <div class="answers">
+            <div class="answer" data-value="1">Look for a map or directory that shows you</div>
+            <div class="answer" data-value="2">Ask for directions</div>
+            <div class="answer" data-value="3">Walk around til you find what you're looking for</div>
+        </div>
+        <div class="button-holder clearfix">
+            <div class="previous mini button">Previous</div><div class="next mini button">Next</div>
+        </div>    
+    </section>
+        
+    <section class="q-n-a">
+        <h3 class="question">12. Of these classes, which is your favorite?</h3>
+        <div class="answers">
+            <div class="answer" data-value="1">Art or English class</div>
+            <div class="answer" data-value="2">Music class</div>
+            <div class="answer" data-value="3">Gym or Drama class</div>
+        </div>
+        <div class="button-holder clearfix">
+            <div class="previous mini button">Previous</div><div class="next mini button">Next</div>
+        </div>    
+    </section>
+
+    <section class="q-n-a">
+        <h3 class="question">13. When you hear a song, what are you most likely to do?</h3>
+        <div class="answers">
+            <div class="answer" data-value="1">Picture a music video/scene along with it</div>
+            <div class="answer" data-value="2">Listen or sing along</div>
+            <div class="answer" data-value="3">Start dancing</div>
+        </div>
+        <div class="button-holder clearfix">
+            <div class="previous mini button">Previous</div><div class="next mini button">Next</div>
+        </div>    
+    </section>
+
+    <section class="q-n-a">
+        <h3 class="question">14. What do you find most annoying in class?</h3>
+        <div class="answers">
+            <div class="answer" data-value="1">Messy handwriting</div>
+            <div class="answer" data-value="2">Outside noises/loud people</div>
+            <div class="answer" data-value="3">Uncomfortable temperature (too hot/cold)</div>
+        </div>
+        <div class="button-holder clearfix">
+            <div class="previous mini button">Previous</div><div class="next mini button">Next</div>
+        </div>    
+    </section>
+           
+    <section class="q-n-a">
+        <h3 class="question">15. How do you like to relax?</h3>
+        <div class="answers">
+            <div class="answer" data-value="1">Read</div>
+            <div class="answer" data-value="2">Listen to music</div>
+            <div class="answer" data-value="3">Exercise</div>
+        </div>
+        <div class="button-holder clearfix">
+            <div class="previous mini button">Previous</div><div class="next mini button">Next</div>
+        </div>    
+    </section>
+
+    <section class="q-n-a">
+        <h3 class="question">16. What's the best way for you to remember a phone number/pincode?</h3>
+        <div class="answers">
+            <div class="answer" data-value="1">Picture the numbers as you dial them</div>
+            <div class="answer" data-value="2">Say it out loud over and over</div>
+            <div class="answer" data-value="3">Write it down or put it in contacts</div>
+        </div>
+        <div class="button-holder clearfix">
+            <div class="previous mini button">Previous</div><div class="next mini button">Next</div>
+        </div>    
+    </section>
+
+    <section class="q-n-a">
+        <h3 class="question">17. If you won a game, which of these prizes would you choose?</h3>
+        <div class="answers">
+            <div class="answer" data-value="1">A poster </div>
+            <div class="answer" data-value="2">A CD or vinyl</div>
+            <div class="answer" data-value="3">A sports ball</div>
+        </div>
+        <div class="button-holder clearfix">
+            <div class="previous mini button">Previous</div><div class="next mini button">Next</div>
+        </div>    
+    </section>
+               
+    <section class="q-n-a">
+        <h3 class="question">18. Where would you rather go with a group of friends?</h3>
+        <div class="answers">
+            <div class="answer" data-value="1">A movie</div>
+            <div class="answer" data-value="2">A concert</div>
+            <div class="answer" data-value="3">A theme park</div>
+        </div>
+        <div class="button-holder clearfix">
+            <div class="previous mini button">Previous</div><div class="next mini button">Next</div>
+        </div>    
+    </section>
+
+    <section class="q-n-a">
+        <h3 class="question">19. What are you most likely to remember about new people you meet?</h3>
+        <div class="answers">
+            <div class="answer" data-value="1">Their face</div>
+            <div class="answer" data-value="2">Their name</div>
+            <div class="answer" data-value="3">What you talked about</div>
+        </div>
+        <div class="button-holder clearfix">
+            <div class="previous mini button">Previous</div><div class="next mini button">Next</div>
+        </div>    
+    </section>
+
+    <section class="q-n-a">
+        <h3 class="question">20. When you give someone directions to your house, what do you tell them?</h3>
+        <div class="answers">
+            <div class="answer" data-value="1">Landmarks they will pass</div>
+            <div class="answer" data-value="2">Street names</div>
+            <div class="answer" data-value="3">"Follow me, I'll show you"</div>
+        </div>
+        <div class="button-holder clearfix">
+            <div class="previous mini button">Previous</div><div class="next mini button">Next</div>
+        </div>    
+    </section>
+   
+   </div> <!-- End quiz -->
+   <div class="button finish">Reveal My Learning Type!</div>
+   <div class="response" style="display: none;"><p></p></div> <!-- for response page -->
+
+   <!-- jQuery -->
+   <script
+   src="https://code.jquery.com/jquery-3.6.1.js"
+   integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+   crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        //in order to check that the user has answered all the questions I need to know how many there are
+    var questions = $('.question').length; //stores number of questions. how many items have the class questions. jQuery stores in nodelist
+    var total = 0; //stores the sum of the answers user selected
+    var avg = 0; //stores the average of the answers user selected
+    var myQuestions = $('section.q-n-a'); //calls section in quiz area
+    var currQ = 0; //stores the question user is currently on
+    
+    myQuestions.each(function(index){
+
+    $(this).attr('id', index+1);
+
+        if(index == 0){
+        //removes the previous button from the frist question (as there is no prev)
+            $(this).find('.previous').remove();
+        }
+
+    })
+
+    function showQ(){ 
+        $('section.q-n-a').hide();
+        currQ++;
+        if( $('#'+currQ).length > 0){
+            //there is at least one of that id on the page
+            $('#'+currQ).fadeIn(200);
+        }else{
+            $('.finish').fadeIn();
+        }
+
+    }
+
+    showQ();
+    //calling prev and next buttons to run showQ everytime buttons are pressed    
+    $('.previous, .next').click( function(){
+        if($(this).hasClass('previous')){
+            currQ-=2; //as showQ always increments by 1, I set the question value (currQ) back by 2 the showQ
+        }
+        showQ();
+
+    })
+
+    //to determine what the value of the answer the user clicked is
+    $('.answer').on('click', function(){
+       if($(this).parent().find('.selected').length > 0){
+        //tells me if there are answer siblings that already have the class selected on them
+            total -= $(this).parent().find('.selected').data('value'); //removes what is selected before from the total
+            $(this).parent().find('.selected').removeClass('selected'); //removes the class and adds the new total
+       }
+       //to change it out for the new selection
+        $(this).addClass('selected');
+        total += $(this).data('value');
+
+        console.log(total);
+
+    })
+
+    //user comes to end of page and clicks the reveal button...
+
+    $('.finish').on('click', function(){
+        //when the reveal button gets clicked
+        //to make sure the user has selected all the questions:
+
+        if($('.answer.selected').length === questions){
+        avg = total / questions;
+        var message = '';
+                //an answer for every question - if length that the user selected is equal to the number of questions
+            if(avg <= 1.6){
+                message = 'You are a Visual Learner! You learn by reading or seeing pictures. You understand and remember things by sight. You can picture what you are learning in your head, and you learn best by using methods that are primarily visual. You like to see what you are learning.';
+            }else if(avg<=2.6){ 
+                message = 'You are an Auditory Learner! You learn by hearing and listening. You understand and remember things you have heard. You store information by the way it sounds, and you have an easier time understanding spoken instructions than written ones. You often learn by reading out loud because you have to hear it or speak it in order to know it.';
+            }else{
+                message = 'You are a Tactile Learner! You learn by touching and doing. You understand and remember things through physical movement. You are a "hands-on" learner who prefers to touch, move, build, or draw what you learn, and you tend to learn better when some type of physical activity is involved. You need to be active and take frequent breaks, you often speak with your hands and with gestures, and you may have difficulty sitting still.';
+
+            } 
+
+            $('#quiz-area, .finish').hide(); //hides quiz area id when user has finished
+
+        }else{
+            message = 'Oops! Looks like you missed a question';
+        }   
+            $('.response p').text(message) //message in <p> (for response page)
+            $('.response').show(); //shows message in <p>
+
+        //alert(message);
+        
+
+
+
+    })
+        
+
+        
+    
+</script>
+</body>
+
+
+</html>
